@@ -2,6 +2,7 @@
 (function() {
   const link = document.getElementById('openTelegram');
   if (!link) return;
+
   link.addEventListener('click', function(e) {
     const ua = navigator.userAgent || '';
     const tgUrl = 'https://t.me/+f-0be4MLfREzYmIy';
@@ -10,11 +11,13 @@
 
     if (/Android/i.test(ua)) {
       e.preventDefault();
-      window.location = androidIntent;
+      window.location.href = androidIntent;
     } else if (/iPhone|iPad|iPod/i.test(ua)) {
       e.preventDefault();
-      window.location = iosDeep;
-      setTimeout(function() { window.location = tgUrl; }, 500);
+      window.location.href = iosDeep;
+      setTimeout(function() {
+        window.location.href = tgUrl;
+      }, 500);
     }
     // на десктопі href спрацює як звичайно
   });
