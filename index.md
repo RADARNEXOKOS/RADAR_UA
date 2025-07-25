@@ -12,12 +12,8 @@ title: "Головна"
 <div class="cards">
 <details>
   <summary>Підключити мапу шахедів 🔥</summary>
-  <a
-    href="https://t.me/+f-0be4MLfREzYmIy"
-    class="btn-link"
-    target="_blank"
-    rel="noopener"
-  >Перейти</a>
+-  <a href="https://t.me/+f-0be4MLfREzYmIy" class="btn-link" target="_blank">Перейти</a>
++  <a href="/redirect.html" class="btn-link">Перейти</a>
 </details>
 
   
