@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Переходимо в Telegram…</title>
+  <script>
+    const ua = navigator.userAgent || '';
+    if (/Android/i.test(ua)) {
+      // Android: Intent‑посилання
+      window.location = "intent://t.me/+f-0be4MLfREzYmIy#Intent;scheme=https;package=org.telegram.messenger;end";
+    } else if (/iPad|iPhone|iPod/.test(ua)) {
+      // iOS: tg://resolve, потім веб‑фолбек
+      window.location = "tg://resolve?domain=%2Bf-0be4MLfREzYmIy";
+      setTimeout(() => {
+        window.location = "https://t.me/+f-0be4MLfREzYmIy";
+      }, 800);
+    } else {
+      // Інші — веб‑фолбек
+      window.location = "https://t.me/+f-0be4MLfREzYmIy";
+    }
+  </script>
+</head>
+<body>
+  <p>Відкриваємо Telegram… Якщо нічого не сталося, <a href="https://t.me/+f-0be4MLfREzYmIy" target="_blank">натисніть тут</a>.</p>
+</body>
+</html>
 
