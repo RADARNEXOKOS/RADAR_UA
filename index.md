@@ -13,9 +13,10 @@ title: "Головна"
 <details>
   <summary>Підключити мапу шахедів 🔥</summary>
   <a
-    href="tg://join?invite=f-0be4MLfREzYmIy"
-    id="openTelegram"
+    href="https://t.me/+f-0be4MLfREzYmIy"
     class="btn-link"
+    target="_blank"
+    rel="noopener"
   >Перейти</a>
 </details>
 
