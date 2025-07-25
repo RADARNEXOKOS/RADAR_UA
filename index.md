@@ -24,7 +24,7 @@ title: "Головна"
     <div class="btn-expand-content">
       🤔 Якщо не редиректить — скористайся цим прямим лінком:<br>
       <a
-        href="https://t.me/+f-0be4MLfREzYmIy"
+        href="/RADAR_UA/telegram.html"
         style="color: var(--primary); text-decoration: none;"
         target="_blank" rel="noopener"
       >https://t.me/+f-0be4MLfREzYmIy</a>
