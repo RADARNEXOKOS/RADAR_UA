@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Переадресація в Telegram…</title>
+  <script>
+    const ua = navigator.userAgent || '';
+    if (/Android/i.test(ua)) {
+      // Android: intent запустить Telegram напряму
+      window.location = "intent://t.me/+f-0be4MLfREzYmIy#Intent;scheme=https;package=org.telegram.messenger;end";
+    } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+      // iOS: tg://join… з фолбеком на HTTPS‑версію
+      window.location = "tg://join?invite=f-0be4MLfREzYmIy";
+      setTimeout(() => {
+        window.location = "https://t.me/+f-0be4MLfREzYmIy";
+      }, 800);
+    } else {
+      // Інші платформи — просто веб‑сторінка
+      window.location = "https://t.me/+f-0be4MLfREzYmIy";
+    }
+  </script>
+</head>
+<body>
+  <p>Відкриваємо Telegram… Якщо нічого не відбулося, <a href="https://t.me/+f-0be4MLfREzYmIy" target="_blank">натисніть тут</a>.</p>
+</body>
+</html>
