@@ -4,30 +4,34 @@
   if (!link) return;
 
   link.addEventListener('click', function(e) {
-    e.preventDefault();
     const ua = navigator.userAgent || '';
-    // Invite deep-link for group/channel
-    const tgDeepLink = 'tg://join?invite=f-0be4MLfREzYmIy';
-    const fallbackUrl = 'https://t.me/+f-0be4MLfREzYmIy';
+    // Android intent-схема
+    const androidIntent = 
+      'intent://t.me/+f-0be4MLfREzYmIy#Intent;package=org.telegram.messenger;scheme=https;end';
+    // iOS deep-link
+    const iosDeepLink = 'tg://join?invite=f-0be4MLfREzYmIy';
+    // Фолбек на веб-лінк
+    const webFallback = 'https://t.me/+f-0be4MLfREzYmIy';
 
-    // Attempt to open Telegram via hidden iframe
-    const openApp = () => {
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.src = tgDeepLink;
-      document.body.appendChild(iframe);
-    };
-
-    if (/Android|iPhone|iPad|iPod/i.test(ua)) {
-      // Mobile in-app browsers
-      openApp();
-      // Fallback to web link after delay
-      setTimeout(function() {
-        window.location.href = fallbackUrl;
-      }, 2000);
-    } else {
-      // Desktop or normal browsers: open web link directly
-      window.open(fallbackUrl, '_blank');
+    if (/Android/i.test(ua)) {
+      e.preventDefault();
+      // Спочатку пробуємо Intent
+      window.location.href = androidIntent;
+      // На випадок, якщо Telegram не встановлений
+      setTimeout(() => {
+        window.location.href = webFallback;
+      }, 1500);
     }
+    else if (/iPhone|iPad|iPod/i.test(ua)) {
+      e.preventDefault();
+      // Direct tg://join…
+      window.location.href = iosDeepLink;
+      // Фолбек через 1.5с
+      setTimeout(() => {
+        window.location.href = webFallback;
+      }, 1500);
+    }
+    // У десктопних WebView (те саме) або звичайному браузері нічого не блокуємо:
+    // href="tg://..." спрацює, або якщо не підтримується — користувач все одно потрапить на HTTPS-лінк при довгому-натисканні.
   });
 })();
