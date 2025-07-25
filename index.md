@@ -10,15 +10,15 @@ title: "Головна"
 *Ми не є офіційним джерелом інформації*
 
 <div class="cards">
- <details>
+<details>
   <summary>Підключити мапу шахедів 🔥</summary>
   <a
-    href="https://t.me/+f-0be4MLfREzYmIy"
+    href="tg://join?invite=f-0be4MLfREzYmIy"
     id="openTelegram"
     class="btn-link"
-    target="_blank"
   >Перейти</a>
 </details>
+
   
   <details>
     <summary>Підтримати фінансово ❤️</summary>
