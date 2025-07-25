@@ -6,10 +6,11 @@
   link.addEventListener('click', function(e) {
     e.preventDefault();
     const ua = navigator.userAgent || '';
-    const tgDeepLink = 'tg://resolve?domain=%2Bf-0be4MLfREzYmIy';
+    // Invite deep-link for group/channel
+    const tgDeepLink = 'tg://join?invite=f-0be4MLfREzYmIy';
     const fallbackUrl = 'https://t.me/+f-0be4MLfREzYmIy';
 
-    // Спроба відкрити Telegram через прихований iframe
+    // Attempt to open Telegram via hidden iframe
     const openApp = () => {
       const iframe = document.createElement('iframe');
       iframe.style.display = 'none';
@@ -18,14 +19,14 @@
     };
 
     if (/Android|iPhone|iPad|iPod/i.test(ua)) {
-      // Мобільні in-app браузери
+      // Mobile in-app browsers
       openApp();
-      // Якщо через 2 секунди додаток не відкрився, переходимо на веб‑версію
+      // Fallback to web link after delay
       setTimeout(function() {
         window.location.href = fallbackUrl;
       }, 2000);
     } else {
-      // Десктоп або звичайні браузери — просто відкрити веб‑лінк
+      // Desktop or normal browsers: open web link directly
       window.open(fallbackUrl, '_blank');
     }
   });
