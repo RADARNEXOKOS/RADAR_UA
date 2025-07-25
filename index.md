@@ -12,9 +12,12 @@ title: "Головна"
 <div class="cards">
 <details>
   <summary>Підключити мапу шахедів 🔥</summary>
--  <a href="https://t.me/+f-0be4MLfREzYmIy" class="btn-link" target="_blank">Перейти</a>
-+  <a href="/redirect.html" class="btn-link">Перейти</a>
+  <a
+    href="intent://t.me/+f-0be4MLfREzYmIy#Intent;package=org.telegram.messenger;scheme=https;end"
+    class="btn-link"
+  >Перейти</a>
 </details>
+
 
   
   <details>
