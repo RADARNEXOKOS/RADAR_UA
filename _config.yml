@@ -1,7 +1,7 @@
 # Site settings
 title: "РАДАР УКРАЇНИ"
-baseurl: ""          # Change if deploying to a subpath (e.g. "/Radarka")
-url: ""              # Your domain, e.g. https://username.github.io
+baseurl: "/RADAR_UA"          # Change if deploying to a subpath (e.g. "/Radarka")
+url: "https://RADARNEXOKOS.github.io"              # Your domain, e.g. https://username.github.io
 
 # Build settings
 enable_plugins: []   # No additional plugins needed
