@@ -10,11 +10,11 @@ title: "Головна"
 *Ми не є офіційним джерелом інформації*
 
 <div class="cards">
-  <details>
-    <summary>Підключитися в Telegram</summary>
-    <a href="https://t.me/PatrulUA" target="_blank">Офіційний канал PatrulUA</a>
-  </details>
-
+ <details>
+  <summary>Підключити мапу шахедів 🔥</summary>
+  <a href="#" id="openTelegram" class="btn-link">Перейти</a>
+</details>
+  
   <details>
     <summary>Підтримати фінансово ❤️</summary>
     <a href="https://send.monobank.ua/jar/9R5jENzNo5" target="_blank">
